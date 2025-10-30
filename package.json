@@ -1,0 +1,53 @@
+{
+  "name": "ai-ml-career-transition-platform",
+  "version": "1.0.0",
+  "description": "A comprehensive web platform to help software engineers transition into AI/ML roles with personalized learning paths, role mappings, and training models.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "validate-html": "echo 'Visit https://validator.w3.org/ to validate HTML'",
+    "validate-css": "echo 'Visit https://jigsaw.w3.org/css-validator/ to validate CSS'",
+    "lighthouse": "npx lighthouse http://localhost:8000 --view",
+    "deploy:netlify": "netlify deploy --prod",
+    "deploy:vercel": "vercel --prod",
+    "deploy:firebase": "firebase deploy --only hosting"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earn-technologies/ai-ml-platform.git"
+  },
+  "keywords": [
+    "ai",
+    "ml",
+    "machine-learning",
+    "career",
+    "transition",
+    "software-engineering",
+    "upskilling",
+    "learning-path",
+    "education",
+    "technology",
+    "training",
+    "mlops",
+    "deep-learning",
+    "data-science"
+  ],
+  "author": {
+    "name": "Earn Technologies LLC",
+    "email": "info@earntechnologies.com",
+    "url": "https://earntechnologies.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/earn-technologies/ai-ml-platform/issues",
+    "email": "info@earntechnologies.com"
+  },
+  "homepage": "https://earn-technologies.github.io/ai-ml-platform/",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

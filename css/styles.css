@@ -473,7 +473,7 @@ ul, ol {
 .solutions-grid {
     display: grid;
     gap: 32px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .feature-card {
@@ -528,6 +528,12 @@ ul, ol {
 .feature-card li {
     position: relative;
     padding-left: 18px;
+    line-height: 1.6;
+}
+
+.feature-card strong {
+    color: rgba(226, 232, 240, 0.9);
+    font-weight: 600;
 }
 
 .feature-card li::before {
@@ -544,7 +550,7 @@ ul, ol {
 .programs-grid {
     display: grid;
     gap: 34px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .program-card {
@@ -775,6 +781,17 @@ blockquote {
     color: #fff;
     margin-bottom: 16px;
     font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+.timeline-content p {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    color: var(--text-body);
+}
+
+.timeline-content p strong {
+    color: var(--color-secondary);
+    font-weight: 600;
 }
 
 .timeline-content ul {

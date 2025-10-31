@@ -1,61 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <!-- Background Circle -->
-  <circle cx="100" cy="100" r="95" fill="url(#grad1)" stroke="#667eea" stroke-width="3"/>
-  
-  <!-- Gradient Definition -->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="earnLogoTitle earnLogoDesc">
+  <title id="earnLogoTitle">Earn Technologies Logo</title>
+  <desc id="earnLogoDesc">Abstract monogram with layered letter E and gradient orb</desc>
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="earnGradient" x1="8" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#53FFE2" />
+      <stop offset="46%" stop-color="#5C7CFF" />
+      <stop offset="100%" stop-color="#2F4CFF" />
     </linearGradient>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+    <linearGradient id="earnGlow" x1="20" y1="12" x2="52" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#64FFF0" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3754FF" stop-opacity="0.1" />
     </linearGradient>
   </defs>
-  
-  <!-- Stylized "E" for Earn -->
-  <g transform="translate(100, 100)">
-    <!-- Main E shape -->
-    <path d="M -35 -40 L 20 -40 L 20 -25 L -20 -25 L -20 -5 L 15 -5 L 15 10 L -20 10 L -20 30 L 20 30 L 20 45 L -35 45 Z" 
-          fill="url(#grad2)" 
-          stroke="#667eea" 
-          stroke-width="2"/>
-    
-    <!-- Tech circuit lines -->
-    <line x1="25" y1="-30" x2="40" y2="-30" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="42" cy="-30" r="3" fill="#ffffff"/>
-    
-    <line x1="25" y1="0" x2="40" y2="0" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="42" cy="0" r="3" fill="#ffffff"/>
-    
-    <line x1="25" y1="35" x2="40" y2="35" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="42" cy="35" r="3" fill="#ffffff"/>
-    
-    <!-- AI Brain Neural Network Pattern -->
-    <g opacity="0.6">
-      <circle cx="-45" cy="-35" r="4" fill="#ffffff"/>
-      <circle cx="-45" cy="0" r="4" fill="#ffffff"/>
-      <circle cx="-45" cy="35" r="4" fill="#ffffff"/>
-      
-      <line x1="-45" y1="-35" x2="-45" y2="0" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="-45" y1="0" x2="-45" y2="35" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="-45" y1="-35" x2="-35" y2="-25" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="-45" y1="0" x2="-35" y2="0" stroke="#ffffff" stroke-width="1.5"/>
-      <line x1="-45" y1="35" x2="-35" y2="25" stroke="#ffffff" stroke-width="1.5"/>
-    </g>
-    
-    <!-- Rising arrow (growth/earning concept) -->
-    <g transform="translate(30, -50)">
-      <path d="M 0 20 L 0 -5 L -8 3 M 0 -5 L 8 3" 
-            stroke="#ffffff" 
-            stroke-width="3" 
-            fill="none" 
-            stroke-linecap="round" 
-            stroke-linejoin="round"/>
-    </g>
-  </g>
-  
-  <!-- Outer decorative ring -->
-  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="rgba(15, 21, 40, 0.88)" />
+  <circle cx="44" cy="20" r="12" fill="url(#earnGlow)" />
+  <path d="M19 19C19 15.6863 21.6863 13 25 13H44C45.6569 13 47 14.3431 47 16C47 17.6569 45.6569 19 44 19H27V29H40.5C42.1569 29 43.5 30.3431 43.5 32C43.5 33.6569 42.1569 35 40.5 35H27V45H44C45.6569 45 47 46.3431 47 48C47 49.6569 45.6569 51 44 51H25C21.6863 51 19 48.3137 19 45V19Z" fill="url(#earnGradient)" />
+  <path d="M23 19C23 17.3431 24.3431 16 26 16H42" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-linecap="round" />
+  <path d="M26 32H40" stroke="rgba(255,255,255,0.14)" stroke-width="2" stroke-linecap="round" />
+  <path d="M23 45C23 43.3431 24.3431 42 26 42H42" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" />
 </svg>

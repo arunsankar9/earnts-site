@@ -4,30 +4,27 @@
       <stop offset="0%" stop-color="#0066FF" />
       <stop offset="100%" stop-color="#00A8FF" />
     </linearGradient>
-    <linearGradient id="favAccent" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+    <linearGradient id="favAccent" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FF5A5F" />
       <stop offset="100%" stop-color="#FF8C42" />
     </linearGradient>
   </defs>
   
-  <!-- Background for visibility -->
-  <circle cx="32" cy="32" r="30" fill="white" opacity="0.95"/>
-  <circle cx="32" cy="32" r="30" fill="url(#favPrimary)" opacity="0.15"/>
+  <!-- White background for visibility -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="white"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#favPrimary)" opacity="0.1"/>
   
-  <!-- Simplified Logo Symbol -->
-  <g transform="translate(32, 32)">
-    <!-- Letter E -->
-    <path d="M -14 -12 L -14 12 L 8 12 L 8 6 L -8 6 L -8 0 L 6 0 L 6 -6 L -8 -6 L -8 -12 Z" 
-          fill="url(#favPrimary)"/>
-    
-    <!-- AI Nodes -->
-    <circle cx="12" cy="-8" r="4" fill="url(#favAccent)"/>
-    <circle cx="14" cy="0" r="4" fill="url(#favAccent)"/>
-    <circle cx="12" cy="8" r="4" fill="url(#favAccent)"/>
-    
-    <!-- Connections -->
-    <line x1="8" y1="-6" x2="12" y2="-8" stroke="url(#favPrimary)" stroke-width="1.5"/>
-    <line x1="8" y1="0" x2="14" y2="0" stroke="url(#favPrimary)" stroke-width="1.5"/>
-    <line x1="8" y1="6" x2="12" y2="8" stroke="url(#favPrimary)" stroke-width="1.5"/>
-  </g>
+  <!-- Letter E -->
+  <path d="M 14 18 L 14 46 L 40 46 L 40 40 L 20 40 L 20 36 L 38 36 L 38 28 L 20 28 L 20 24 L 40 24 L 40 18 Z" 
+        fill="url(#favPrimary)"/>
+  
+  <!-- AI Nodes -->
+  <circle cx="46" cy="22" r="5" fill="url(#favAccent)"/>
+  <circle cx="48" cy="32" r="6" fill="url(#favPrimary)"/>
+  <circle cx="46" cy="42" r="4" fill="url(#favAccent)"/>
+  
+  <!-- Connections -->
+  <line x1="40" y1="24" x2="46" y2="22" stroke="url(#favPrimary)" stroke-width="2"/>
+  <line x1="40" y1="32" x2="48" y2="32" stroke="url(#favPrimary)" stroke-width="2"/>
+  <line x1="40" y1="40" x2="46" y2="42" stroke="url(#favPrimary)" stroke-width="2"/>
 </svg>

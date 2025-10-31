@@ -204,6 +204,7 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
     gap: 28px;
+    padding: 0 24px;
 }
 
 .logo-group {
@@ -276,6 +277,10 @@ ul, ol {
     gap: 5px;
     padding: 10px;
     cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-toggle-line {
@@ -1259,7 +1264,23 @@ address {
 /* Responsive Breakpoints */
 @media (max-width: 1100px) {
     .site-header > .container {
-        gap: 18px;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .brand-logo {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        min-height: 56px;
+    }
+
+    .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.7rem;
     }
 
     .nav-toggle {
@@ -1268,38 +1289,55 @@ address {
 
     .main-nav {
         position: absolute;
-        top: 82px;
-        right: 20px;
-        left: 20px;
-        background: rgba(12, 18, 40, 0.96);
-        border: 1px solid rgba(148, 163, 184, 0.12);
-        border-radius: var(--radius-md);
-        padding: 22px;
-        box-shadow: var(--shadow-lg);
-        transform-origin: top right;
-        transform: scaleY(0);
+        top: 100%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 102, 255, 0.2);
+        border-radius: 0;
+        padding: 24px 20px;
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-20px);
         opacity: 0;
-        transition: transform 0.2s ease, opacity 0.2s ease;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     }
 
     .main-nav.open {
-        transform: scaleY(1);
+        transform: translateY(0);
         opacity: 1;
+        visibility: visible;
     }
 
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
     }
 
     .hero-card {
-        max-width: 520px;
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -1312,87 +1350,216 @@ address {
     .programs-grid,
     .insights-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
     }
 
     .proof-grid,
     .testimonial-grid,
     .cta-card {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
 
     .cta-card {
-        padding: 46px 36px;
+        padding: 40px 28px;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .footer-columns {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
     }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --layout-width: 95vw;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
     .section {
-        padding: 90px 0;
+        padding: 70px 0;
     }
 
     .section-heading {
         flex-direction: column;
         align-items: flex-start;
-        gap: 24px;
+        gap: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.75rem, 5vw, 2.2rem);
     }
 
     .hero {
-        padding: 130px 0 90px;
+        padding: 100px 0 70px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero-metrics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .metric {
+        padding: 18px 20px;
+    }
+
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.65rem;
     }
 
     .solutions-grid,
     .programs-grid,
     .insights-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card,
+    .program-card,
+    .insight-card {
+        padding: 24px 20px;
     }
 
     .testimonial-stats {
         flex-wrap: wrap;
         row-gap: 16px;
+        gap: 20px;
     }
 
     .cta-card {
-        gap: 40px;
+        gap: 32px;
+        padding: 32px 24px;
+    }
+
+    .cta-form {
+        padding: 24px 20px;
     }
 
     .footer-columns {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .outcome-list {
+        gap: 20px;
+    }
+
+    .outcome {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .outcome-value {
+        font-size: 2rem;
+    }
+
+    .timeline-stage {
+        grid-template-columns: 40px 1fr;
+        gap: 16px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .proof-quote {
+        padding: 32px 24px;
     }
 }
 
 @media (max-width: 560px) {
+    :root {
+        --layout-width: 92vw;
+    }
+
+    .container {
+        padding: 0 4vw;
+    }
+
     .site-header > .container {
-        flex-wrap: wrap;
+        min-height: 70px;
+        padding: 12px 0;
     }
 
-    .btn-outline {
-        width: 100%;
-        justify-content: center;
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
     }
 
-    .hero-actions {
+    .brand-text {
+        display: flex;
         flex-direction: column;
-        align-items: stretch;
     }
 
-    .hero-metrics {
-        grid-template-columns: 1fr;
+    .brand-name {
+        font-size: 0.95rem;
     }
 
-    .metric {
-        padding: 18px;
+    .brand-tagline {
+        font-size: 0.6rem;
+        display: none;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.75rem, 8vw, 2.4rem);
+        line-height: 1.2;
+    }
+
+    .hero-card {
+        padding: 24px 20px;
+    }
+
+    .hero-card-title {
+        font-size: 1.3rem;
     }
 
     .proof-outcomes,
@@ -1400,17 +1567,52 @@ address {
     .timeline-content,
     .feature-card,
     .program-card,
-    .insight-card,
-    .cta-card,
-    .cta-form {
-        padding: 26px;
+    .insight-card {
+        padding: 20px 18px;
     }
 
     .cta-card {
+        padding: 28px 20px;
         border-radius: var(--radius-md);
     }
 
-    .brand-text {
-        display: none;
+    .cta-form {
+        padding: 20px 16px;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .metric {
+        padding: 16px 18px;
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
+    .metric-label {
+        font-size: 0.8rem;
+    }
+
+    .program-card-top h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
 }

@@ -1,22 +1,28 @@
 :root {
-    --color-night: #0b1120;
-    --color-deep: #101d3a;
-    --color-primary: #3754ff;
-    --color-primary-dark: #2b45d6;
-    --color-secondary: #27d6b9;
-    --color-accent: #f97316;
-    --color-light: #f8fafc;
-    --color-muted: #94a3b8;
-    --color-soft: rgba(41, 61, 128, 0.3);
-    --text-body: #e2e8f0;
-    --text-muted: #94a3b8;
+    /* Modern AI/ML Color Palette - Inspired by Airbnb & Best Buy */
+    --color-night: #0F172A;
+    --color-deep: #1E293B;
+    --color-primary: #0066FF;
+    --color-primary-dark: #0052CC;
+    --color-primary-light: #00A8FF;
+    --color-secondary: #00D4AA;
+    --color-secondary-dark: #00B894;
+    --color-accent: #FF5A5F;
+    --color-accent-orange: #FF8C42;
+    --color-light: #FFFFFF;
+    --color-muted: #64748B;
+    --color-muted-light: #94A3B8;
+    --color-soft: rgba(0, 102, 255, 0.15);
+    --text-body: #F1F5F9;
+    --text-muted: #94A3B8;
+    --text-dark: #0F172A;
     --radius-lg: 32px;
     --radius-md: 20px;
     --radius-sm: 12px;
-    --shadow-xl: 0 40px 70px -30px rgba(15, 23, 42, 0.6);
-    --shadow-lg: 0 24px 40px -20px rgba(15, 23, 42, 0.45);
-    --shadow-md: 0 16px 24px -12px rgba(15, 23, 42, 0.35);
-    --shadow-sm: 0 10px 18px -10px rgba(15, 23, 42, 0.25);
+    --shadow-xl: 0 40px 70px -30px rgba(0, 102, 255, 0.25);
+    --shadow-lg: 0 24px 40px -20px rgba(0, 102, 255, 0.2);
+    --shadow-md: 0 16px 24px -12px rgba(0, 102, 255, 0.15);
+    --shadow-sm: 0 10px 18px -10px rgba(0, 102, 255, 0.1);
     --layout-width: min(1160px, 92vw);
 }
 
@@ -35,8 +41,9 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-body);
-    background: radial-gradient(circle at top right, rgba(55, 84, 255, 0.18), transparent 45%),
-                radial-gradient(circle at 20% 10%, rgba(39, 214, 185, 0.12), transparent 50%),
+    background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.15), transparent 45%),
+                radial-gradient(circle at 20% 10%, rgba(0, 212, 170, 0.12), transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 90, 95, 0.08), transparent 50%),
                 var(--color-night);
     min-height: 100vh;
 }
@@ -87,25 +94,27 @@ ul, ol {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-primary), #6f7bff);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     color: #fff;
-    box-shadow: 0 22px 30px -16px rgba(55, 84, 255, 0.6);
+    box-shadow: 0 22px 30px -16px rgba(0, 102, 255, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 30px 40px -16px rgba(55, 84, 255, 0.6);
+    box-shadow: 0 30px 40px -16px rgba(0, 102, 255, 0.5);
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
 }
 
 .btn-secondary {
-    background: rgba(39, 214, 185, 0.1);
-    color: #0cd5b3;
-    border: 1px solid rgba(39, 214, 185, 0.4);
+    background: rgba(0, 212, 170, 0.12);
+    color: #00D4AA;
+    border: 1px solid rgba(0, 212, 170, 0.4);
 }
 
 .btn-secondary:hover {
-    background: rgba(39, 214, 185, 0.16);
+    background: rgba(0, 212, 170, 0.2);
     transform: translateY(-1px);
+    border-color: rgba(0, 212, 170, 0.6);
 }
 
 .btn-outline {
@@ -134,7 +143,7 @@ ul, ol {
     font-size: 0.75rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-weight: 700;
     margin-bottom: 18px;
 }
@@ -179,8 +188,8 @@ ul, ol {
     top: 0;
     z-index: 999;
     backdrop-filter: blur(18px);
-    background: rgba(12, 18, 40, 0.72);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    background: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(0, 102, 255, 0.15);
 }
 
 .site-header.scrolled {
@@ -205,12 +214,15 @@ ul, ol {
 .brand {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
+    padding: 4px 0;
 }
 
 .brand-logo {
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    min-height: 64px;
 }
 
 .brand-text {
@@ -221,9 +233,10 @@ ul, ol {
 
 .brand-name {
     font-family: 'Space Grotesk', 'Inter', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #fff;
     font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .brand-tagline {
@@ -282,8 +295,9 @@ ul, ol {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 10% 20%, rgba(55, 84, 255, 0.35), transparent 55%),
-                radial-gradient(circle at 80% 0%, rgba(39, 214, 185, 0.18), transparent 45%);
+    background: radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.25), transparent 55%),
+                radial-gradient(circle at 80% 0%, rgba(0, 212, 170, 0.15), transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(255, 90, 95, 0.08), transparent 60%);
     pointer-events: none;
 }
 
@@ -538,7 +552,7 @@ ul, ol {
 
 .program-highlights a,
 .timeline-content a {
-    color: var(--color-secondary);
+    color: var(--color-primary-light);
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
@@ -546,7 +560,7 @@ ul, ol {
 
 .program-highlights a:hover,
 .timeline-content a:hover {
-    color: #61f3d9;
+    color: var(--color-primary);
 }
 
 .feature-card li::before {
@@ -557,7 +571,7 @@ ul, ol {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-secondary), rgba(39, 214, 185, 0.3));
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary-light));
 }
 
 .programs-grid {
@@ -607,21 +621,22 @@ ul, ol {
     align-self: flex-start;
     padding: 6px 14px;
     border-radius: 999px;
-    background: rgba(39, 214, 185, 0.16);
-    color: #52f1d2;
+    background: rgba(0, 212, 170, 0.18);
+    color: #00D4AA;
     font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .badge-accent {
-    background: rgba(249, 115, 22, 0.18);
-    color: #ffb064;
+    background: rgba(255, 90, 95, 0.2);
+    color: #FF8C42;
 }
 
 .badge-neutral {
-    background: rgba(148, 163, 184, 0.18);
-    color: rgba(226, 232, 240, 0.75);
+    background: rgba(0, 102, 255, 0.15);
+    color: #00A8FF;
 }
 
 .program-highlights {
@@ -645,7 +660,7 @@ ul, ol {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: rgba(39, 214, 185, 0.8);
+    background: var(--color-accent);
 }
 
 .program-meta {
@@ -709,9 +724,9 @@ ul, ol {
 }
 
 .proof-quote {
-    background: linear-gradient(135deg, rgba(55, 84, 255, 0.22), rgba(15, 20, 40, 0.85));
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(15, 20, 40, 0.9));
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(0, 102, 255, 0.2);
     padding: 46px;
     color: rgba(226, 232, 240, 0.9);
     position: relative;
@@ -775,9 +790,9 @@ blockquote {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(39, 214, 185, 0.9), rgba(39, 214, 185, 0.35));
+    background: radial-gradient(circle, var(--color-primary), var(--color-primary-light));
     border: 2px solid rgba(12, 18, 40, 0.9);
-    box-shadow: 0 10px 30px rgba(39, 214, 185, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.4);
     margin-top: 4px;
 }
 
@@ -828,7 +843,7 @@ blockquote {
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: rgba(55, 84, 255, 0.6);
+    background: var(--color-primary);
 }
 
 .insights-grid {
@@ -855,10 +870,11 @@ blockquote {
 }
 
 .insight-category {
-    color: var(--color-secondary);
+    color: var(--color-accent);
     font-size: 0.8rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .insight-card h3 {
@@ -872,11 +888,15 @@ blockquote {
 }
 
 .insight-link {
-    color: var(--color-secondary);
+    color: var(--color-primary-light);
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+}
+
+.insight-link:hover {
+    color: var(--color-primary);
 }
 
 .insight-link::after {
@@ -1071,7 +1091,7 @@ blockquote {
     width: 10px;
     height: 10px;
     border-radius: 3px;
-    background: linear-gradient(135deg, var(--color-secondary), rgba(39, 214, 185, 0.25));
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary-light));
 }
 
 .cta-form {
@@ -1118,8 +1138,8 @@ blockquote {
 .form-field select:focus,
 .form-field textarea:focus {
     outline: none;
-    border-color: rgba(39, 214, 185, 0.5);
-    box-shadow: 0 0 0 3px rgba(39, 214, 185, 0.15);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.2);
 }
 
 .hidden {
@@ -1153,8 +1173,10 @@ blockquote {
 }
 
 .footer-logo {
-    width: 46px;
-    height: 46px;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
 }
 
 .footer-socials {
